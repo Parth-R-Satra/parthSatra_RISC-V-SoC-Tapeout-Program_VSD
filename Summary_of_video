@@ -1,0 +1,8 @@
+summary of video -1 of the tapeout program 
+
+The RISC-V chip tapeout flow starts with chip modeling, where two reference points are created: O0 (GCC model) and O1 (C-based specs). 
+The GCC model ensures software compilation and toolchain correctness, while the C model defines the hardware specifications with a C-language testbench for functional validation.
+With these golden references in place, the RTL architect develops the hardware description in Verilog (O2), modeling the processor, peripherals, and IPs.
+This RTL is then synthesized into a gate-level netlist, alongside macros and analog IPs, which are integrated at the SoC level (O3). 
+Once integration is complete, the design enters the physical design phase (RTL2GDS), involving floorplanning, placement, clock tree synthesis, and routing. 
+The final design undergoes DRC and LVS checks before generating the GDSII file, which is sent for fabrication, completing the chip tapeout process.
